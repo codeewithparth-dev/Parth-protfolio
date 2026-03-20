@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://parthkishan.vercel.app/sitemap.xml
