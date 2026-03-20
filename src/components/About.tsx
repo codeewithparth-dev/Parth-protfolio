@@ -143,7 +143,7 @@ const About = () => {
             </motion.div>
 
             {/* Skills — taller bars + visible label */}
-            <div className="w-full">
+            <div className="w-full mb-12 md:mb-20">
               <motion.h3
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -267,7 +267,7 @@ const About = () => {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={inView ? { opacity: 1, scale: 1 } : {}}
                     transition={{ duration: 0.4, delay: 0.6 + (i * 0.1) }}
-                    className="px-3 md:px-4 py-1.5 md:py-2 bg-[var(--black-2)] border border-[var(--lime)] text-[var(--cream)] text-xs md:text-sm font-medium rounded-full"
+                    className="px-4 md:px-5 py-2 md:py-2.5 bg-[rgba(200,241,53,0.08)] border border-[var(--lime)] text-[var(--lime)] text-xs md:text-sm font-semibold rounded-full tracking-wider uppercase transition-all duration-300 hover:bg-[rgba(200,241,53,0.15)] hover:shadow-[0_0_12px_rgba(200,241,53,0.2)]"
                   >
                     {role}
                   </motion.span>
@@ -335,25 +335,37 @@ const About = () => {
               <div className="absolute left-0 top-6 w-full h-[2px] border-t-2 border-dotted border-[var(--lime)] opacity-30 z-0" />
               <div className="flex flex-row justify-between gap-4 md:gap-8 relative z-10">
                 {processSteps.map((step, i) => (
-                  <motion.div
-                    key={step.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={inView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.6, delay: 0.5 + i * 0.15 }}
-                    className="flex flex-col items-center text-center w-1/4"
-                  >
-                    <div className="w-12 h-12 rounded-full bg-[var(--black)] border-2 border-[var(--lime)] flex items-center justify-center font-display font-bold text-[var(--lime)] text-lg mb-6 shadow-[0_0_15px_rgba(200,241,53,0.2)]">
-                      {step.id}
-                    </div>
-                    <div>
-                      <h4 className="font-display text-lg font-bold text-[var(--cream)] mb-2">
-                        {step.title}
-                      </h4>
-                      <p className="text-[var(--cream-muted)] text-[13px] leading-relaxed">
-                        {step.desc}
-                      </p>
-                    </div>
-                  </motion.div>
+                  <div key={`step-wrapper-${step.id}`} className="flex items-center gap-4 md:gap-8 flex-1" style={{ position: 'relative' }}>
+                    <motion.div
+                      key={step.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={inView ? { opacity: 1, y: 0 } : {}}
+                      transition={{ duration: 0.6, delay: 0.5 + i * 0.15 }}
+                      className="flex flex-col items-center text-center flex-1 min-w-0"
+                    >
+                      <div className="w-12 h-12 rounded-full bg-[var(--black)] border-2 border-[var(--lime)] flex items-center justify-center font-display font-bold text-[var(--lime)] text-lg mb-6 shadow-[0_0_15px_rgba(200,241,53,0.2)]">
+                        {step.id}
+                      </div>
+                      <div>
+                        <h4 className="font-display text-lg font-bold text-[var(--cream)] mb-2">
+                          {step.title}
+                        </h4>
+                        <p className="text-[var(--cream-muted)] text-[13px] leading-relaxed">
+                          {step.desc}
+                        </p>
+                      </div>
+                    </motion.div>
+                    {i < processSteps.length - 1 && (
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={inView ? { opacity: 1 } : {}}
+                        transition={{ duration: 0.6, delay: 0.5 + i * 0.15 }}
+                        className="hidden md:flex items-center justify-center text-[var(--lime)] text-xl font-bold flex-shrink-0"
+                      >
+                        →
+                      </motion.div>
+                    )}
+                  </div>
                 ))}
               </div>
             </div>

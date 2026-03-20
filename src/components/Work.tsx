@@ -77,7 +77,7 @@ const Work = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.15 }}
-              className="flex flex-col md:grid md:grid-cols-[80px_1fr_auto] items-start md:items-center gap-[24px] md:gap-[40px] p-[24px] md:p-[40px_32px] border border-[var(--gray-2)] rounded-[12px] bg-[var(--black)] no-underline transition-all duration-400 mb-[16px] md:mb-[16px] cursor-none relative overflow-hidden group hover:bg-[rgba(200,241,53,0.02)] hover:border-[rgba(200,241,53,0.4)]"
+              className="flex flex-col md:grid md:grid-cols-[80px_1fr_auto] items-start md:items-center gap-[20px] md:gap-[32px] p-[20px] md:p-[32px_28px] border border-[var(--gray-2)] rounded-[12px] bg-[var(--black)] no-underline transition-all duration-400 mb-[16px] md:mb-[16px] cursor-none relative overflow-hidden group hover:bg-[rgba(200,241,53,0.02)] hover:border-[rgba(200,241,53,0.4)]"
             >
               {/* Number */}
               <span style={{
