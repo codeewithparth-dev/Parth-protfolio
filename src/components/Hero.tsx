@@ -28,7 +28,7 @@ function useScramble(text: string, trigger: boolean) {
 const Hero = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [scramble, setScramble] = useState(false)
-  if (window.innerWidth < 768) return
+  
   useEffect(() => {
     const timer = setTimeout(() => setScramble(true), 400)
     return () => clearTimeout(timer)
