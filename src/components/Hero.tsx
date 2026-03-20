@@ -28,7 +28,7 @@ function useScramble(text: string, trigger: boolean) {
 const Hero = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [scramble, setScramble] = useState(false)
-
+  if (window.innerWidth < 768) return
   useEffect(() => {
     const timer = setTimeout(() => setScramble(true), 400)
     return () => clearTimeout(timer)
@@ -110,11 +110,11 @@ const Hero = () => {
         <canvas ref={canvasRef} style={{ width: '100%', height: '100%' }} />
       </div>
 
-      <AnimatedBlob 
+      <AnimatedBlob
         className="hidden md:block"
         style={{ top: '5%', right: '5%', width: '500px', height: '500px', zIndex: 0, borderRadius: '50%', overflow: 'hidden' }}
-        opacity={0.4} 
-        scale={1.5} 
+        opacity={0.4}
+        scale={1.5}
       />
 
       {/* Lime glow top right */}
@@ -205,13 +205,13 @@ const Hero = () => {
               Frontend Developer & UI Designer
             </span>
             <span className="hidden md:inline-block" style={{ color: 'var(--gray)', fontSize: '18px' }}>—</span>
-            <a 
+            <a
               href="#about"
               className="group relative flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[var(--black-2)] border border-[var(--gray-2)] cursor-pointer overflow-hidden transition-all duration-500 hover:border-[var(--lime)] hover:shadow-[0_0_15px_rgba(200,241,53,0.15)] no-underline"
             >
               {/* Shine effect on hover */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(200,241,53,0.1)] to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
-              
+
               <div className="w-5 h-5 rounded-full bg-[var(--lime)] flex items-center justify-center text-[var(--black)] font-bold text-[10px] uppercase tracking-wider relative z-10 shadow-[0_0_10px_rgba(200,241,53,0.4)]">
                 O
               </div>
