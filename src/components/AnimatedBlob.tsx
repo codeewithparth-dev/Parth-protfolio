@@ -13,6 +13,8 @@ const BlobMesh = ({ color = '#c8f135', opacity = 0.15, scale = 1 }: BlobProps) =
   const geometryRef = useRef<THREE.IcosahedronGeometry>(null)
   const originalPositionsRef = useRef<THREE.Vector3[]>([])
 
+
+
   useFrame((state) => {
     if (!meshRef.current || !geometryRef.current) return
 
