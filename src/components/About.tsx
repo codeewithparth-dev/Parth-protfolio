@@ -184,7 +184,7 @@ const About = () => {
         </div>
 
         {/* --- BLOCK 2: WHAT MAKES ME DIFFERENT --- */}
-        <div className="w-full flex flex-col items-center text-center gap-16 md:gap-0">
+        <div className="w-full flex-col items-center text-center gap-16 md:gap-0">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -238,7 +238,7 @@ const About = () => {
             initial={{ opacity: 0, x: 0 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex gap-5 md:gap-8 relative z-10"
+            className="flex gap-5 md:gap-8 relative z-10 w-full"
           >
             {/* Timeline marker */}
             <div className="w-[3px] bg-[var(--lime)] flex-shrink-0" />
@@ -260,7 +260,7 @@ const About = () => {
                 Omnicraft isn't just a project — it's a vision. A team of designers, developers, motion artists, and storytellers from Karachi, building bold digital experiences for brands across the globe. We're just getting started.
               </p>
 
-              <div className="flex flex-wrap justify-start items-center gap-3 mt-2">
+              <div className="flex flex-wrap justify-start items-center gap-3 mt-6">
                 {roles.map((role, i) => (
                   <motion.span
                     key={role}
