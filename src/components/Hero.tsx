@@ -310,7 +310,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="flex flex-col md:flex-row items-center justify-between flex-wrap gap-[32px] md:gap-[24px] w-full"
+          className="flex flex-col md:flex-row items-center justify-between flex-wrap gap-[32px] md:gap-[24px] w-full mt-4 md:mt-0"
         >
           <div className="flex gap-[10px] flex-wrap justify-center md:justify-start">
             {['React', 'TypeScript', 'Tailwind', 'Figma', 'Framer Motion'].map((s, i) => (

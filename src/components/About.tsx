@@ -116,7 +116,7 @@ const About = () => {
               initial={{ opacity: 0, x: 0 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="bg-[var(--black-2)] p-5 md:p-10 border-l-[3px] border-[var(--lime)] w-full ml-0"
+              className="bg-[var(--black-2)] p-5 md:p-10 border-l-[3px] border-[var(--lime)] w-full ml-0 overflow-hidden"
             >
               <div className="flex flex-col gap-5 md:gap-7">
                 {[
@@ -134,9 +134,9 @@ const About = () => {
                     )
                   },
                 ].map((row, idx, arr) => (
-                  <div key={row.label} className={`flex flex-row justify-between items-center gap-4 pb-5 md:pb-6 ${idx !== arr.length - 1 ? 'border-b border-[var(--gray-2)]' : 'pb-0'}`}>
+                  <div key={row.label} className={`flex flex-row justify-between items-center gap-4 py-4 md:py-5 ${idx !== arr.length - 1 ? 'border-b border-[var(--gray-2)]' : ''}`}>
                     <span className="text-[10px] md:text-xs uppercase tracking-wider text-[var(--cream-muted)] font-semibold flex-shrink-0">{row.label}</span>
-                    <span className="text-sm md:text-base text-[var(--cream)] font-medium text-right flex items-center justify-end min-h-[24px]">{row.value}</span>
+                    <span className="text-sm md:text-base text-[var(--cream)] font-medium text-right flex items-center justify-end min-h-[24px] min-w-0 max-w-[60%]">{row.value}</span>
                   </div>
                 ))}
               </div>
