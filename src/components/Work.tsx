@@ -37,7 +37,7 @@ const Work = () => {
         opacity={0.15} 
         scale={1} 
       />
-      <div className="container relative z-10 px-4 md:px-0">
+      <div className="container relative z-10">
 
         {/* Section label */}
         <motion.div

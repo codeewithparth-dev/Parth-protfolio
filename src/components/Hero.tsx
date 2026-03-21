@@ -133,7 +133,7 @@ const Hero = () => {
         borderRadius: '50%', zIndex: 0,
       }} />
 
-      <div className="container relative z-10 pt-[100px] md:pt-[120px] pb-[60px] md:pb-[80px] w-full flex flex-col items-center text-center md:items-start md:text-left px-4 md:px-0">
+      <div className="container relative z-10 pt-[100px] md:pt-[120px] pb-[60px] md:pb-[80px] w-full flex flex-col items-center text-center md:items-start md:text-left">
 
         {/* Status pill */}
         <motion.div
@@ -238,7 +238,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="flex flex-col md:flex-row gap-[20px] md:gap-[20px] items-center flex-wrap mb-[48px] md:mb-[64px] w-full xl:w-auto px-4 md:px-0">
+          className="flex flex-col md:flex-row gap-[20px] md:gap-[20px] items-center flex-wrap mb-[48px] md:mb-[64px] w-full xl:w-auto">
           <a
             href="#work"
             className="w-full md:w-auto text-center"

@@ -59,7 +59,7 @@ const About = () => {
         scale={1.2}
       />
 
-      <div className="container relative z-10 flex flex-col gap-16 md:gap-24 px-4 md:px-0">
+      <div className="container relative z-10 flex flex-col gap-16 md:gap-24">
 
         {/* --- BLOCK 1: THE PERSON --- */}
         <div className="flex flex-col md:grid md:grid-cols-[60%_1fr] gap-10 md:gap-24 items-start">
@@ -260,7 +260,7 @@ const About = () => {
                 Omnicraft isn't just a project — it's a vision. A team of designers, developers, motion artists, and storytellers from Karachi, building bold digital experiences for brands across the globe. We're just getting started.
               </p>
 
-              <div className="flex flex-wrap justify-center md:justify-start items-center gap-3 md:gap-3 mt-2">
+              <div className="flex flex-wrap justify-start items-center gap-3 mt-2">
                 {roles.map((role, i) => (
                   <motion.span
                     key={role}
@@ -406,8 +406,6 @@ const About = () => {
                     <div className="flex items-center gap-5 mt-2 mb-2">
                       <div className="w-12 flex-shrink-0" />
                       <span style={{ color: 'var(--lime)', fontSize: '20px', opacity: 0.6 }}>↓</span>
-
-                      ↓
                     </div>
                   )}
                 </div>
